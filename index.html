@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walt-Owen｜Windows の小さな便利アプリ</title>
+<meta name="description" content="Walt-Owen が個人で開発している Windows 用の小さな便利アプリの一覧です。時刻で壁紙を自動で切り替える「壁紙スケジューラ」などを無料で公開しています。">
+<link rel="canonical" href="https://woy74237-ship-it.github.io/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#2a2266">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Walt-Owen">
+<meta property="og:title" content="Walt-Owen｜Windows の小さな便利アプリ">
+<meta property="og:description" content="Windows 用の小さな便利アプリを個人で開発・無料公開しています。">
+<meta property="og:url" content="https://woy74237-ship-it.github.io/">
+<meta property="og:image" content="https://woy74237-ship-it.github.io/wallpaper-scheduler/images/ogp.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- 検索結果に表示するサイト名（Google の「サイト名」） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Walt-Owen",
+  "url": "https://woy74237-ship-it.github.io/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Walt-Owen",
+  "url": "https://woy74237-ship-it.github.io/",
+  "sameAs": [
+    "https://github.com/woy74237-ship-it",
+    "https://zenn.dev/walt_owen",
+    "https://note.com/quiet_raven5890",
+    "https://ofuse.me/c0fdccc4"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #f6f6fb; --surface: #ffffff; --border: #e4e3f0;
+    --text: #1b1f4a; --text-dim: #5a5f7a; --accent: #4b3fb8;
+    --shadow: 0 10px 30px rgba(27, 31, 74, .10); --night: #2a2266;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12122a; --surface: #1c1c3a; --border: #2e2d55;
+      --text: #f1f0ff; --text-dim: #b4b2d6; --accent: #9d8cff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); line-height: 1.75;
+    font-family: "Yu Gothic UI", "Hiragino Sans", "Noto Sans JP", "Meiryo", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .wrap { width: min(880px, 100% - 32px); margin: 0 auto; }
+
+  .hero {
+    position: relative; color: #fff; text-align: center; padding: 96px 0 88px;
+    background: var(--night) url("hero.png") center bottom / cover no-repeat;
+  }
+  .hero::after { content: ""; position: absolute; inset: 0; background: rgba(20, 18, 60, .35); }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero h1 { margin: 0 0 8px; font-size: clamp(34px, 6vw, 52px); letter-spacing: .03em; text-shadow: 0 2px 16px rgba(20, 18, 60, .45); }
+  .hero p { margin: 0; font-size: clamp(15px, 2.4vw, 18px); color: rgba(255, 255, 255, .95); }
+
+  section { padding: 56px 0 0; }
+  h2 { font-size: 24px; margin: 0 0 20px; }
+
+  .app {
+    display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: center;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px;
+    text-decoration: none; color: var(--text); box-shadow: var(--shadow); transition: transform .15s ease;
+  }
+  .app:hover { transform: translateY(-2px); }
+  .app img { width: 96px; height: 96px; display: block; }
+  .app h3 { margin: 0; font-size: 20px; }
+  .app p { margin: 4px 0 8px; color: var(--text-dim); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--border); color: var(--text-dim); }
+  @media (max-width: 520px) { .app { grid-template-columns: 64px 1fr; } .app img { width: 64px; height: 64px; } }
+
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a {
+    padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+    text-decoration: none; color: var(--text); font-size: 15px;
+  }
+  .links a:hover { border-color: var(--accent); }
+
+  footer { padding: 56px 0 40px; text-align: center; color: var(--text-dim); font-size: 14px; }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Walt-Owen</h1>
+      <p>Windows の小さな便利アプリを、個人で作って無料で公開しています。</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="apps-title">
+      <h2 id="apps-title">アプリ</h2>
+      <a class="app" href="wallpaper-scheduler/">
+        <img src="wallpaper-scheduler/images/icon-256.png" alt="" width="96" height="96">
+        <div>
+          <h3>壁紙スケジューラ</h3>
+          <p>指定した時刻に、Windows の壁紙を自動で切り替えるアプリ。朝は朝焼け、昼は青空、夜は星空と、時間帯に合わせて壁紙が変わります。</p>
+          <div class="tags"><span>Windows 10 / 11</span><span>無料</span><span>インストール不要</span></div>
+        </div>
+      </a>
+    </section>
+
+    <section aria-labelledby="links-title">
+      <h2 id="links-title">リンク</h2>
+      <div class="links">
+        <a href="https://github.com/woy74237-ship-it">GitHub</a>
+        <a href="https://zenn.dev/walt_owen">Zenn（開発の記事）</a>
+        <a href="https://note.com/quiet_raven5890">note（使い方の紹介）</a>
+        <a href="https://ofuse.me/c0fdccc4">♥ OFUSE で応援する</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Walt-Owen</footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://woy74237-ship-it.github.io/sitemap.xml
+Sitemap: https://woy74237-ship-it.github.io/wallpaper-scheduler/sitemap.xml
